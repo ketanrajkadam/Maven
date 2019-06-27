@@ -1,11 +1,16 @@
-    <project xmlns="http://maven.apache.org/POM/4.0.0"   
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0   
-    http://maven.apache.org/xsd/maven-4.0.0.xsd">  
-      
-      <modelVersion>4.0.0</modelVersion>  
-      <groupId>com.javatpoint.application1</groupId>  
-      <artifactId>my-app</artifactId>  
-      <version>1</version>  
-      
-    </project>  
+    public class Armstrong {
+        public static void main(String[] args) {
+            int number = 371, originalNumber, remainder, result = 0;
+            originalNumber = number;
+            while (originalNumber != 0)
+            {
+                remainder = originalNumber % 10;
+                result += Math.pow(remainder, 3);
+                originalNumber /= 10;
+            }
+            if(result == number)
+                System.out.println(number + " is an Armstrong number.");
+            else
+                System.out.println(number + " is not an Armstrong number.");
+        }
+    }
